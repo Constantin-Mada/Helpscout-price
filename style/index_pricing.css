@@ -1,0 +1,270 @@
+/***************************************************************
+CSS Reset
+***************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/***************************************************************
+Base Rules
+***************************************************************/
+
+h1 {
+    font-size: 2rem;
+}
+
+
+/***************************************************************
+Layout Rules
+***************************************************************/
+
+.container-fluid {
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+body {
+    color: rgb(85, 101, 117);
+    margin: 0 auto;
+    overflow: auto;
+}
+
+
+/**************************************************************
+Components
+**************************************************************/
+
+.dropdown-item strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(64, 82, 97);
+}
+
+.dropdown-item p {
+    font-size: 13px;
+    margin: 0px;
+    line-height: 1.5;
+}
+
+.submenu li,
+.dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pack-title {
+    display: inline-flex;
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pack-title h1 {
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.savingup {
+    color: rgb(9, 130, 63);
+}
+
+.standard-pack {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    color: rgb(37, 54, 66);
+}
+
+.standard-pack:hover {
+    color: rgb(37, 54, 66);
+    text-decoration: none;
+}
+
+.standard-pack .pack-check {
+    color: rgb(0, 119, 204);
+}
+
+.price {
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+
+.text-mark {
+    display: inline-block;
+    position: relative;
+}
+
+.text-mark::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-image: url('https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--hsfg-highlight.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&ar=13%3A1&auto=format%2Ccompress&fm=webp&w=134');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
+
+.standard-link {
+    text-decoration: none;
+    color: rgb(37, 54, 66);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: transform 0.3s ease 0s, box-shadow 0.3s ease 0s;
+}
+
+.standard-link:first-child {
+    border-bottom: 1px solid rgb(241, 243, 245);
+    ;
+}
+
+.shadow a:hover {
+    color: inherit;
+    background: white;
+    transform: scale(1.05) translateZ(5px);
+    box-shadow: rgb(22 51 127 / 20%) 0px 22px 28px;
+}
+
+.link-color {
+    color: rgb(0, 119, 204);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.customer img:nth-child(2) {
+    width: 20%;
+}
+
+.experience {
+    background: url("https://www.helpscout.com/static/WhiteBrushGradient-d909f168b8fb03792fe5def13d7be5b2.png") no-repeat center rgb(248, 249, 252);
+}
+
+.footer {
+    background: rgb(29, 43, 54);
+    color: white;
+}
+
+.logo {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.logo_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.8px solid rgb(147, 161, 176);
+}
+
+.footer_link {
+    color: rgb(147, 161, 176);
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    padding-top: 0.4rem;
+}
+
+.footer_link:hover {
+    color: white;
+}
+
+.sitefooter ul {
+    justify-content: center;
+    display: flex;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+
+/***********************************************************
+Media queries
+***********************************************************/
+
+@media only screen and (max-width:768px) {
+    .shadow {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .footer_column li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .logo_column {
+        align-items: flex-start;
+        border: 0;
+    }
+    .sitefooter {
+        border-top: 0.8px solid rgb(147, 161, 176);
+    }
+    .sitefooter ul {
+        justify-content: flex-start;
+    }
+    .sitefooter p2 {
+        justify-content: flex-end;
+    }
+    .discount .shadow {
+        width: 85%;
+    }
+    .footer .justify-content-end {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .standard-link:first-child {
+        border-right: 1px solid rgb(241, 243, 245);
+        border-bottom: none;
+    }
+}
+
+@media only screen and (min-width:972px) {
+    .standard-pack {
+        width: 29%;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .sitefooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sitefooter .justify-content-end {
+        display: flex;
+        flex-direction: column;
+    }
+    .sitefooter .d-block {
+        display: flex!important;
+        justify-content: center;
+        padding-top: 0.8rem;
+    }
+    .logo_column a {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+
+
+
+
+    <!-- My own Stylesheet CDN Link -->
+    <link rel="stylesheet" href="https://drive.google.com/uc?id=1jLrfISsLUcRiwgNl0koSfsS6lylj0E7h">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/index_pricing.css">
+
+
+
+
+    <style type="text/css">
+        @media all and (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu {
+                display: none;
+            }
+            .navbar .nav-item:hover .dropdown-menu {
+                display: block;
+            }
+            .navbar .nav-item .dropdown-menu {
+                margin-top: 0;
+            }
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class=" pt-4 pb-5">
+        <div class="container-fluid">
+            <nav style="background-color:white;" class="navbar navbar-expand-lg navbar-light fixed-top py-2  shadow">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibG9nby1zdmcgdS1tcmctMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgODQyIDE2OCIgcm9sZT0iaW1nIj48dGl0bGU+SGVscCBTY291dCBsb2dvPC90aXRsZT48ZGVzYyBpZD0iaGVscHNjb3V0LWxvZ28tZGVzYy0xIj5IZWxwIERlc2sgc29mdHdhcmUgLSBDdXN0b21lciBTdXBwb3J0IFNvZnR3YXJlPC9kZXNjPgogICAgPHN0eWxlPi5zdDN7ZmlsbDojMmEzYjQ3fS5zdDF7ZmlsbDojMTI5MmVlfTwvc3R5bGU+CiAgICA8cGF0aCBjbGFzcz0ic3QzIiBkPSJNMjMyIDMxLjVsLS4zLjF2NDQuN2gtNDIuNFYzMS42bC0uMy0uMWMtNi4zLTEuMy0xMi41LTEuMy0xOC43IDBsLS4zLjF2MTAyLjhsLjMuMWMzLjEuNiA2LjIgMSA5LjMgMXM2LjItLjMgOS40LTFsLjMtLjFWOTIuN2g0Mi40djQxLjdsLjMuMWM2LjIgMS4zIDEyLjUgMS4zIDE4LjcgMGwuMy0uMVYzMS42bC0uMy0uMWMtNi4zLTEuMi0xMi41LTEuMi0xOC43IDB6TTI5Ny43IDYwLjRjLTIyLjIgMC0zNS40IDE0LTM1LjQgMzcuNSAwIDEyLjIgMi44IDIxLjkgOC40IDI4LjYgNi4xIDcuMyAxNS4yIDExIDI3LjMgMTEgMjAuNSAwIDMxLTEyLjIgMzIuMy0yNC4zdi0uM2wtLjMtLjFjLTUuMi0xLjctMTAtMi4xLTE1LjctMS4zaC0uMnYuMmMtMS4yIDcuMi03LjIgMTEuNS0xNS45IDExLjUtMTIuMiAwLTE4LjItNi43LTE4LjQtMjAuNWg1MS42di0uM2MxLjUtMTMuNi0xLjItMjQuNi03LjgtMzIuMS02LjEtNi40LTE1LTkuOS0yNS45LTkuOXptLS4yIDEzLjNjNS4xIDAgOS40IDEuNiAxMi4zIDQuNyAzIDMuMiA0LjUgOCA0LjIgMTMuN2gtMzQuMmMuMy0xMS43IDYuOC0xOC40IDE3LjctMTguNHpNMzQzLjkgMzEuNWwtLjMuMXYxMDIuOGwuMy4xYzIuOS42IDUuOCAxIDguOCAxIDIuOSAwIDUuOS0uMyA4LjgtMWwuMy0uMVYzMS42bC0uMy0uMWMtNS44LTEuMy0xMS43LTEuMi0xNy42IDB6TTQxMi40IDYwLjRjLTcuNyAwLTE1LjggMy0yMy41IDguN2wtMS4xLTUuNC0uMi0uMWMtNC40LTEuMy04LTEuMy0xMi4zIDBsLS4yLjFWMTY2bC4zLjFjMi45LjYgNS44IDEgOC44IDFzNS45LS4zIDguOC0xbC4zLS4xdi0zNC4yYzYuMSAzLjkgMTIuNiA1LjcgMTkuOSA1LjcgMjAuMiAwIDMyLjMtMTQuMyAzMi4zLTM4LjQtLjEtMjQuNS0xMi4xLTM4LjctMzMuMS0zOC43ek0zOTMgODAuN2M1LjQtMy43IDEwLjQtNS40IDE1LjgtNS40IDEyLjMgMCAxOSA4LjUgMTkgMjQuMSAwIDE1LjMtNi42IDIzLjQtMTkuMiAyMy40LTUuNCAwLTEwLjUtMS43LTE1LjYtNS4zVjgwLjd6TTUyMi42IDc5LjFjLTMuMS0xLjItNS45LTIuMi04LjYtMy4xLTE0LTUtMjIuNC04LTIyLjYtMTUuNi0uMS0zLjUgMS02LjUgMy40LTkgMy41LTMuNiA5LjQtNS41IDE2LjYtNS41IDcuMSAwIDEyLjYgMS45IDE1LjkgNS40IDIuOCAzIDQgNy4xIDMuNyAxMi4ydi4zbC4zLjFjNi4xIDEuMiAxMi4yIDEuMSAxOC44LS40bC4zLS4xdi0uM2MuNC04LjYtMi4yLTE2LjEtNy41LTIxLjctNi42LTctMTcuMi0xMC43LTMwLjYtMTAuOGgtLjRjLTI0LjkgMC0zOS45IDExLjEtNDAuMSAyOS43LS4xIDE4LjUgMTYuOSAyNC43IDI3LjEgMjguM2wxLjUuNmMzLjQgMS4yIDYuNiAyLjMgOS40IDMuMyAxMy44IDQuOCAyMi4xIDcuNyAyMi40IDE1IC4xIDMuOC0xIDYuOS0zLjMgOS4zLTMuMyAzLjQtOS4xIDUuMS0xNi44IDUtOC41IDAtMTUtMi4yLTE4LjctNi4yLTIuNy0zLTMuOC02LjgtMy40LTExLjR2LS4zbC0uMy0uMWMtNi4yLTEuMi0xMi41LTEuMS0xOC43LjNsLS4yLjF2LjNjLS41IDguMyAyIDE1LjcgNy40IDIxLjQgNy4yIDcuNyAxOSAxMS43IDM0LjIgMTEuNiAxNC45IDAgMzkuNC00IDM5LjYtMzAtLjMtMTcuMy0xNS4xLTIyLjktMjkuNC0yOC40ek01OTYuNyA3NS4zYzEyLjMgMCAxNS4yIDggMTUuOCAxMi43di4zaC4zYzUuNy45IDExLjEuNSAxNi4zLTFsLjMtLjF2LS4zYy0uNS03LjItMy42LTEzLjctOC43LTE4LjQtNS44LTUuMy0xNC4xLTguMi0yMy45LTguMi0yMy40IDAtMzYuMyAxMy43LTM2LjMgMzguNiAwIDI0LjggMTIuOCAzOC41IDM2IDM4LjUgMTAgMCAxOC40LTIuOSAyNC4zLTguNCA0LjktNC42IDcuOS0xMC44IDguNS0xNy41di0uM2wtLjMtLjFjLTQuOS0xLjctMTAuMy0yLTE2LjItMWgtLjJ2LjJjLTEuNiAxMS4yLTEyLjUgMTItMTUuOCAxMi0xMi42IDAtMTguNS03LjUtMTguNS0yMy42LS4xLTE1LjkgNS44LTIzLjQgMTguNC0yMy40ek02NzMuNyA2MC40Yy0yMyAwLTM1LjcgMTMuNy0zNS43IDM4LjYgMCAyNC44IDEyLjcgMzguNSAzNS43IDM4LjUgMjMgMCAzNS43LTEzLjcgMzUuNy0zOC41IDAtMjQuOS0xMi43LTM4LjYtMzUuNy0zOC42ek02OTIgOTkuMWMwIDE1LjktNiAyMy42LTE4LjMgMjMuNnMtMTguMy03LjctMTguMy0yMy42YzAtMTYuMiA1LjgtMjMuOCAxOC4zLTIzLjggMTIuMyAwIDE4LjMgNy44IDE4LjMgMjMuOHpNNzY3IDYzLjdsLS4zLjFWMTE1Yy01LjggNS0xMS4xIDcuMi0xNy4yIDcuMi04LjYgMC0xMi4zLTQuOS0xMi4zLTE2LjV2LTQybC0uMy0uMWMtNS44LTEuNC0xMS43LTEuNC0xNy42IDBsLS4zLjF2NDYuMWMwIDE3LjUgOS40IDI3LjYgMjUuOSAyNy42IDguOCAwIDE2LjUtMy40IDI0LjgtMTFsMS43IDggLjIuMWM0LjIgMS4xIDguNiAxLjEgMTIuOCAwbC4zLS4xVjYzLjdsLS4zLS4xYy01LjYtMS40LTExLjUtMS40LTE3LjQuMXpNODQwLjEgMTIwLjdsLS4xLS4zLS4zLjFjLTcgMS42LTExLjEgMS41LTEzLjUtLjQtMi0xLjYtMi45LTQuNC0yLjktOC44Vjc4LjVoMTQuMmwuMS0uM2MxLTQuOCAxLTkuNyAwLTE0LjZsLS4xLS4zaC0xNC4yVjQzLjlsLS4zLS4xYy01LjgtMS4zLTExLjctMS4zLTE3LjUgMGwtLjMuMS4xIDE5LjRoLTlsLS4xLjNjLTEuMSA0LjgtMS4xIDkuOCAwIDE0LjZsLjEuM2g5bC4xIDMxLjVjMCA4LjguNSAxNy43IDYuNiAyMi44IDMuMyAyLjcgOC4xIDQuMSAxNC4zIDQuMSAzLjggMCA4LjItLjUgMTMuMy0xLjVoLjJsLjEtLjJjMS40LTQuNyAxLjUtOS42LjItMTQuNXoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMC45IDk3LjJsNDguNi00OC42YzYuMy02LjIgMTAuMi0xNC45IDEwLjItMjQuNCAwLTkuNC0zLjgtMTgtOS45LTI0LjJMMTEuMiA0OC42QzQuOSA1NC44IDEgNjMuNSAxIDczYzAgOS41IDMuOCAxOCA5LjkgMjQuMnpNMTI4LjYgNjguOEw4MCAxMTcuNGMtNi4zIDYuMi0xMC4yIDE0LjktMTAuMiAyNC40IDAgOS40IDMuOCAxOCA5LjkgMjQuMmw0OC42LTQ4LjZjNi4zLTYuMiAxMC4yLTE0LjkgMTAuMi0yNC40IDAtOS41LTMuOC0xOC05LjktMjQuMnpNMTI4LjMgNDguN2M2LjMtNi4yIDEwLjItMTQuOSAxMC4yLTI0LjQgMC05LjQtMy44LTE4LTkuOS0yNC4yTDExLjIgMTE3LjRDNC45IDEyMy43IDEgMTMyLjMgMSAxNDEuOWMwIDkuNCAzLjggMTggOS45IDI0LjJMMTI4LjMgNDguN3oiLz4KPC9zdmc+Cg=="
+                            alt="" width="148" height="33" class="d-inline-block">
+
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse  navbar-collapse " id="main_nav">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item px-2  dropdown ">
+
+                                <a class="nav-link  dropdown-toggle" href="#" id="navbacDropdown" data-bs-toggle=" dropdown " aria-expanded="true " aria-haspopup="true ">
+                                    Features
+                                </a>
+                                <!---Submeniu Product-->
+
+
+
+                                <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="width: 40rem; ">
+
+
+                                    <div class="row ">
+
+
+                                        <div class="col-12 col-sm-6 col-md-6 submenu ">
+                                            <ul class="list-unstyled ">
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                    Product Tour
+                                                                </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 submenu ">
+                                            <ul class="list-unstyled ">
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                    Product Tour
+                                                                </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <img class="img p-2 " src="https://www.helpscout.com/static/icon-helpdesk-9aa15bfc0a75de41a2d5f3fb24a2f9f4.svg ">
+
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </li>
+                            <li class="nav-item px-2 dropdown ">
+                                <a class="nav-link dropdown-toggle " href="# " id="navbarDropdown " role="button " data-bs-toggle="dropdown " aria-expanded="false ">Resources</a>
+                                <div class="dropdown-menu ">
+
+
+                                    <div class="row ">
+
+
+                                        <div class="col-12 col-sm-6 col-md-6 submenu ">
+                                            <ul class="list-unstyled ">
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <div class="pe-1 ps-1 ">
+                                                            <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <div class="pe-1 ps-1 "> <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item ">
+                                                        <div class="pe-1 ps-1 "> <strong>
+                                                                Product Tour
+                                                            </strong>
+
+
+                                                            <p>
+                                                                Feel the LiveChat experience
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </li>
+                            <li class="nav-item px-2 ">
+                                <a class="nav-link " href="# ">MarketPlace</a>
+                            </li>
+                            <li class="nav-item px-2 ">
+                                <a class="nav-link " href="# ">Help Center</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="upgrade collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup ">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item px-2 ">
+                                <a class="nav-link " href="# ">Login</a>
+                            </li>
+                            <li class="nav-item px-2 ">
+                                <button type="button " class="btn btn-primary ">
+                                    Free trial</button>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+            </nav>
+
+
+        </div>
+    </header>
+    <main class="overflow-hidden ">
+        <section class="pack ">
+
+            <div class="pt-5 " style="background-color: rgb(248, 249, 252); padding-bottom: 30px; ">
+
+
+                <div class="pack-title ">
+                    <h1 style="color: black; ">Happy customers. Happx team. Warm fuzzies</h1>
+                </div>
+                <div class="form ">
+
+
+                    <div class="form-check form-check-inline ">
+                        <label class="form-check-label " for="flexRadioDefault1 ">
+                            <input class="form-check-input mx-auto" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked> Annual
+                        <span class="savingup ">(Save up to 33%)</span>
+                        </label>
+
+
+
+                        <label class="form-check-label" for="flexRadioDefault2">
+
+                        <input class="form-check-input mx-auto" type="radio" name="flexRadioDefault" id="flexRadioDefault2"> Default radio
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-5">
+
+
+
+                <div class=" row d-flex justify-content-center ">
+                    <a class=" my-5 mx-2 py-5 col-7  col-lg-7   shadow standard-pack position-relative " href=" ">
+
+                        <h2 class="py-1 "> Standard</h2>
+                        <h3 class="price "><sup>$</sup>20</h3>
+                        <p1 class="py-1 ">per User per month</p1>
+                        <span class="py-2 w-75 py-1 fs-6 text-center "> Reporting, automation, and integrations for support teams</span>
+                        </span>
+                        <ul class=" my-3 list-unstyled ">
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "> <i class="fas fa-check pack-check px-1 "></i>Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "> <i class="fas fa-check pack-check px-1 "></i>Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+
+                        </ul>
+                        <span href=" " class="btn w-75 px-2 py-3 my-3  btn-outline-primary fs-5 fw-bold " style="border: 2px solid rgb(197, 206, 214); ">Free 15 day Trial</span>
+                        <div>
+
+                            <img class="d-lg-none d-xxl-block img  mr-3 w-50 position-absolute top-100 start-0 translate-middle" style="padding-bottom: 10rem;" src="https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--plan-standard--illo.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&w=160&h=375&auto=format%2Ccompress&ar=undefined&fm=webp&dpr=3&q=35">
+                        </div>
+                    </a>
+                    <a class=" my-5 mx-2 py-5 col-7  col-lg-7   shadow standard-pack " href=" ">
+
+                        <h2 class="py-1 "> Standard</h2>
+                        <h3 class="price "><sup>$</sup>20</h3>
+                        <p1 class="py-1 ">per User per month</p1>
+                        <span class="py-2 w-75 py-1 fs-6 text-center "> Reporting, automation, and integrations for support teams</span>
+                        </span>
+                        <ul class=" my-3 list-unstyled ">
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "> <i class="fas fa-check pack-check px-1 "></i>Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "> <i class="fas fa-check pack-check px-1 "></i>Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+
+                        </ul>
+                        <span href=" " class="btn w-75 px-2 py-3 my-3  btn-outline-primary fs-5 fw-bold " style="border: 2px solid rgb(197, 206, 214); ">Free 15 day Trial</span>
+
+                    </a>
+                    <a class=" my-5 mx-2 py-5 col-7  col-lg-7   shadow standard-pack position-relative" href=" ">
+
+                        <h2 class="py-1 "> Standard</h2>
+                        <h3 class="price "><sup>$</sup>20</h3>
+                        <p1 class="py-1 ">per User per month</p1>
+                        <span class="py-2 w-75 py-1 fs-6 text-center "> Reporting, automation, and integrations for support teams</span>
+                        </span>
+                        <ul class=" my-3 list-unstyled ">
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "> <i class="fas fa-check pack-check px-1 "></i>Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs</li>
+                            <li class="py-1 my-1 "> <i class="fas fa-check pack-check px-1 "></i>Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+                            <li class="py-1 my-1 "><i class="fas fa-check pack-check px-1 "></i> Mailboxes, 1 Docs
+                                <span><i class="fas fa-info-circle "></i></span></li>
+
+                        </ul>
+                        <span href=" " class="btn w-75 px-2 py-3 my-3  btn-outline-primary fs-5 fw-bold " style="border: 2px solid rgb(197, 206, 214); ">Free 15 day Trial</span>
+                        <div>
+
+                            <img class="d-lg-none d-xxl-block img ms-3  w-50 position-absolute top-100 start-100 translate-middle" style="padding-bottom: 10rem;" src="https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--plan-company--illo.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&w=183&h=375&auto=format%2Ccompress&ar=undefined&fm=webp&dpr=4&q=23">
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="discount text-center py-5 my-5 ">
+            <div class="container-fluid ">
+                <h3 class="py-5 ">Looking for a discount?</h3>
+                <div class=" shadow row mx-auto">
+
+                    <a class="col-12 col-sm-11 col-md-6 px-4 py-5  standard-link " href=" ">
+                        <h3>Help Scout
+                            <span class="text-mark ">for Good</span>
+                        </h3>
+
+                        <p class=" py-5 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. accusantium amet explicabo perferendis nemo id?</p>
+                        <span class="link-color py-2 " href=" ">Learn More <i class=" fas fa-chevron-right "></i></span>
+                    </a>
+                    <a class="col-12 col-sm-11 col-md-6 px-4 py-5 standard-link " href=" ">
+                        <h3 class="position-relative w-50 ">Help Scout for Good
+                            <img class="img d-inline-block position-absolute top-50 start-100 translate-middle-y ms-5" style="width: 30%;" src="https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--startups-rocket.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&w=51&h=55&auto=format%2Ccompress&ar=undefined&fm=webp&dpr=2&q=50">                            </h3>
+
+                        <p class=" py-5 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. accusantium amet explicabo perferendis nemo id?</p>
+                        <span class="link-color py-2 " href=" ">Learn More <i class=" fas fa-chevron-right "></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="team px-5 ">
+            <div class="container-fluid ">
+
+                <div class="row justify-content-center ">
+                    <div class="col-10 col-md-5 mt-5 py-3 px-3 mx-auto ">
+                        <h3 style="color:black; ">You can count on us </h3>
+                        <p class="py-4 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nulla ad aliquam excepturi accusantium quidem magnam, tempore consequuntur, temporibus, tempora harum voluptas distinctio quibusdam dolorum rerum pariatur eveniet
+                            assumenda neque.</p>
+                    </div>
+                    <div class=" col-10 col-md-7 py-2 px-3 mx-auto ">
+                        <img class="img-fluid " src="https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--support-team.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&ar=1.17%3A1&auto=format%2Ccompress&w=6380 ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer ">
+            <div class="container-fluid ">
+                <div class="d-flex flex-column-reverse flex-md-row justify-content-around ">
+
+                    <div class=" col-10 col-md-7 mx-auto py-3 px-3 d-flex justify-content-around position-relative">
+                        <img class=" col-10 col-md-8 col-lg-7 h-100 img-fluid py-2 px-2     " src="https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--bcorp-trees.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&ar=0.79%3A1&auto=format%2Ccompress&w=5500 ">
+                        <img class="  img position-absolute  bottom-0 end-0 translate-middle " src="https://hs-marketing.imgix.net/images/pages/pricing/PricingPage--bcorp-logo.png?ixlib=gatsby-transform-url-1.0.2&fit=crop&ar=1.02%3A1&auto=format%2Ccompress&w=3524 ">                        </div>
+                    <div class="col-10 col-md-5 mt-5 py-3 px-3 mx-auto ">
+                        <h3 style="color:black; ">You can count on us </h3>
+                        <p class="py-4 lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nulla ad aliquam excepturi accusantium quidem magnam, tempore consequuntur, temporibus, tempora harum voluptas distinctio quibusdam dolorum rerum pariatur eveniet
+                            assumenda neque.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="experience py-5 my-5 text-center ">
+            <div class="w-50 mx-auto py-5 ">
+                <h3>Get started with Help&nbsp;Scout</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto ipsa doloremque quisquam modi at voluptatem dolorum porro, inventore magnam qui pariatur ad minima a, quo maxime quidem unde cumque maiores!</p>
+
+                <button type="submit " class="mx-auto btn btn-primary py-2 px-5 my-4 fs-5 fw-bolder ">Sign up free</button>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div class="footer py-5 ">
+        <div class="container-fluid ">
+            <div class="row mx-auto my-3">
+                <div class="col-12 col-lg-4 logo_column ">
+                    <div>
+                        <a>
+                            <svg class="logo my-2" xmlns="http://www.w3.org/2000/svg " viewBox="0 0 137.5 166 " role="img ">
+                            <path fill="#1292ee " d="M9.9 97.2l48.6-48.6c6.3-6.2 10.2-14.9 10.2-24.4 0-9.4-3.8-18-9.9-24.2L10.2 48.6C3.9 54.8 0 63.5 0 73c0 9.5 3.8 18 9.9 24.2zM127.6 68.8L79 117.4c-6.3 6.2-10.2 14.9-10.2 24.4 0 9.4 3.8 18 9.9 24.2l48.6-48.6c6.3-6.2
+                                    10.2-14.9 10.2-24.4 0-9.5-3.8-18-9.9-24.2zM127.3 48.7s0-.1 0 0c6.3-6.2 10.2-14.9 10.2-24.4 0-9.4-3.8-18-9.9-24.2L10.2 117.4C3.9 123.6 0 132.3 0 141.8c0 9.4 3.8 18 9.9 24.2L127.3 48.7z ">
+                            </path>
+                        </svg>
+                        </a>
+                        <h3 class="pt-2 pb-4 "> Tools for the world's most customer-centric businesses</h3>
+
+                    </div>
+                    <div class="d-none d-lg-block   mt-5 col-12  col-md-12">
+                        <a href=" ">
+                            <img class="img " src="https://www.helpscout.com/images/components/SiteFooter/b-corp.svg ">
+
+                        </a>
+                        <img class="img px-3" src="https://www.helpscout.com/images/components/SiteFooter/pledge-1.svg "> </div>
+
+                </div>
+
+                <div class="col-12 col-md-3 col-lg-2 footer_column text-sm-center pt-1 px-1">
+                    <h5 class="pt-1 pb-1 ">Platform</h5>
+                    <ul class="list-unstyled ">
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+
+
+                    </ul>
+
+                </div>
+                <div class="col-12 col-md-3 col-lg-2 footer_column text-sm-center pt-1 px-1">
+                    <h5 class="pt-1 pb-1 ">Platform</h5>
+                    <ul class="list-unstyled ">
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+
+
+                    </ul>
+
+                </div>
+                <div class="col-12 col-md-3 col-lg-2 footer_column text-sm-center pt-1 px-1">
+                    <h5 class="pt-1 pb-1 ">Platform</h5>
+                    <ul class="list-unstyled ">
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+
+
+                    </ul>
+
+                </div>
+                <div class="col-12 col-md-3 col-lg-2 footer_column text-sm-center pt-1 px-1">
+                    <h5 class="pt-1 pb-1 ">Platform</h5>
+                    <ul class="list-unstyled ">
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+                        <li class="py-1 "><a class="footer_link ">Shares Inbox</a></li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="row sitefooter pt-3 ">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 ">
+                    <ul class="list-unstyled " style="color: rgb(147, 161, 176);">
+                        <li class="mx-2"><a><i class="fab fa-twitter p-1 "></i></a></li>
+                        <li class="mx-2"><a><i class="fab fa-twitter p-1 "></i></a></li>
+                        <li class="mx-2"><a><i class="fab fa-twitter p-1 "></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9  justify-content-end  align-items-center">
+
+                    <p2 class=" my-2 mx-2"> <strong> <img class="img " style="color: rgb(147, 161, 176); " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAUCAMAAAAHtrtKAAAApVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+4/eNVAAAANnRSTlMA0SjklnMH+fLeehvqt6xTT0hBEfTayr+mkW0j5sSwqZqLglczLh8SCgYCn2BbOzgW1cdoD+zeM+FjAAABfElEQVQ4y6WT6XKqQBSED/sioiLK5hKNmrhnu9/7P9qFSmSgYlKx/P51DwM9cxr5ooiDZ7mbAcG7Lfdiksr9LHj4bkZ5T5dbOBBKm/7DBIi1aUf+zJBR2/Bd0Jarof1ienb1QGT5h5X8zu6NZnjbMnDmF8cLz0sH8P7F4dXN9kY/n6Tk2ArTN+BRyTEwWkRPIpvZq7R46S27LhVuqbYjonrpyYT5ppa9SSlPF8W+XijW72MAx5suButqQ85YXQok61o9d6E5Qje4xJgBGGavUIvT+gy7ELJGI2PMnL5K+vk93XeoJhBJC5zLCQL2RTNK+f7RRFX7EUs+Fq+AZn3vAd3PqWdgKfdDI9AlIVeWYXQOLjj7gVyBpApsBXgnZRYamS1HXPW7phgTmOVDucoY2fpAJoptzLS8BVCdMwG6Z/mJTqoBab9pJXR3YmtYteODaw7kN45mtm4ZIW8ikUeoSgnzjtyGjjHUZ63KbFNLbmUFBiQDuRPfc7S+3MR/8bIsB1pxRboAAAAASUVORK5CYII=">
+                            Made by hand in over 75 cities around the world.</strong></p2>
+                    <span style=" color: rgb(147, 161, 176); ">© 2021 Help Scout</span>
+                </div>
+                <div class="d-block d-lg-none col-12  col-md-12">
+                    <a href=" ">
+                        <img class="img " src="https://www.helpscout.com/images/components/SiteFooter/b-corp.svg ">
+
+                    </a>
+                    <a>
+                        <img class="img px-3" src="https://www.helpscout.com/images/components/SiteFooter/pledge-1.svg "> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

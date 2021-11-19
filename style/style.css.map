@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAEQ,IAFJ,CACA,IAAI,CACA,CAAC,AAAA,MAAM,CAAC;EACJ,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "style.scss",
+        "_princing.scss",
+        "_global.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
